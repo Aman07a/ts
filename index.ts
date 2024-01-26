@@ -1,27 +1,13 @@
-function add(a: number, b: number): number {
-  return a + b;
-}
+const post = {
+  title: 'Latest Typescript News',
+  daysOld: 10,
+  published: true,
+};
 
-const joinString = function (a: string, b: string): string {
-  if (10 / 10 === 1) {
-    return 'laksdjf';
-  } else if (true) {
-    if (10 / 10 === 1) {
-      if (10 / 10 === 1) {
-        return 'alskjfd';
-      } else if (true) {
-        if (10 / 10 === 1) {
-          return 'alskjfd';
-        } else if (true) {
-          return 'alskjfd';
-        }
-      }
-    } else if (true) {
-      if (10 / 10 === 1) {
-        return 'alskjfd';
-      } else if (true) {
-        return 'alskjfd';
-      }
-    }
-  }
+const printPost = (postToPrint: {
+  title: string;
+  daysOld: number;
+  published: boolean;
+}) => {
+  return `${postToPrint.title} (${postToPrint.daysOld} days old)`;
 };
