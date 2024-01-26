@@ -1,3 +1,9 @@
-import { Car } from './Car';
+class ValueHolder<T> {
+  value: T;
+}
 
-const myCar = new Car();
+const numberHolder = new ValueHolder<number>();
+numberHolder.value;
+
+new ValueHolder<string>();
+new ValueHolder<boolean>();
