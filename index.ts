@@ -1,21 +1,26 @@
 class Car {
-  // color: string;
-  // year: number;
+  public color: string;
+  private year: number;
 
-  // constructor() {
-  //   this.color = 'red';
-  //   this.year = 2000;
-  // }
-
-  color = 'red';
-  year = 2000;
+  constructor(color: string, year: number) {
+    this.color = color;
+    this.year = year;
+  }
 
   drive() {
-    console.log('Vroom');
+    this.putInGear();
+    this.pressPedal();
+    this.turnWheel();
   }
+
+  private putInGear() {}
+
+  private pressPedal() {}
+
+  private turnWheel() {}
 }
 
-const myCar = new Car();
+const myCar = new Car('red', 2000);
 myCar.drive();
 
-console.log(myCar.color, myCar.year);
+console.log(myCar.color);
