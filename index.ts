@@ -2,8 +2,16 @@ class ValueHolder<T> {
   value: T;
 }
 
-const numberHolder = new ValueHolder<number>();
-numberHolder.value;
+const numberWrapper = (value: number): number[] => {
+  return [value];
+};
 
-new ValueHolder<string>();
-new ValueHolder<boolean>();
+const booleanWrapper = (value: boolean): boolean[] => {
+  return [value];
+};
+
+const valueWrapper = <T>(value: T): T[] => {
+  return [value];
+};
+
+const value = valueWrapper<number>(10);
